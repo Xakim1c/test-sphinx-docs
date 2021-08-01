@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Настройка DEMO приложений &mdash; Giga Turnip 1.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Giga Turnip
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Настройка DEMO приложений</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#giga-turnip-front-end">1. Giga Turnip Front End</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Создание новой цепочки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Начальная форма</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Форма верификации</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logic-node">Logic node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Форма выплаты вознаграждения</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#giga-turnip">2. Giga Turnip</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ranks-ranks-limit">Ranks, Ranks Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rank-records">Rank records</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#giga-turnip-task-view">3. Giga Turnip Task View</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#collector">collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verifier">verifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accounter">accounter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Giga Turnip</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Настройка DEMO приложений</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/settings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="demo">
+<h1>Настройка DEMO приложений<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h1>
+<p>Вот мы и добрались до создания нашей первой логической цепочки задач. Наш DEMO бизнес-процесс будет выглядеть следующим образом: Пользователь отправляет шутку - Верификатор проверяет шутку - Если все хорошо, то бухгалтер выплачивает вознаграждение, для реализации данного бизнес-процесса нам необходимо создать нижеследующие элементы цепочки:</p>
+<ol class="arabic simple">
+<li><p>Создадим форму для отправки шутки пользователем</p></li>
+<li><p>После отправки шутки пользователем - будем автоматически создавать задачу на “верификацию” шутки</p></li>
+<li><p>Создадим условие “если шутка качественная”, тогда создать задачу на выплату вознаграждения</p></li>
+<li><p>Создадим форму для выплаты вознаграждения</p></li>
+</ol>
+<div class="section" id="giga-turnip-front-end">
+<h2>1. Giga Turnip Front End<a class="headerlink" href="#giga-turnip-front-end" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Создание новой цепочки<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Перейдите к приложению <strong>Giga Turnip Front End</strong></p></li>
+<li><p>Залогиньтесь через <strong>Log in</strong></p></li>
+<li><p>Создайте новую Кампанию <strong>Jokes Collector</strong></p></li>
+</ol>
+<img alt="_images/s_front_campaign.png" src="_images/s_front_campaign.png" />
+<ol class="arabic simple" start="4">
+<li><p>Откройте созданную Кампанию и нажмите на “коробочку” слева (появится кнопка <em>Add chain</em>)</p></li>
+</ol>
+<img alt="_images/s_chain_create.png" src="_images/s_chain_create.png" />
+<ol class="arabic simple" start="5">
+<li><p>Создайте новую цепочку задач (<em>Add chain</em>)</p></li>
+</ol>
+<img alt="_images/s_chain_add.png" src="_images/s_chain_add.png" />
+<ol class="arabic simple" start="6">
+<li><p>Откройте созданную цепочку. C помощью данного интерфейса Вы можете создавать элементы (ноды) 2-х типов: <em>Форма</em> (<strong>Stage Node</strong>) и <em>Условие</em> (<strong>Logic Node</strong>)</p></li>
+</ol>
+<img alt="_images/s_chain_first_node.png" src="_images/s_chain_first_node.png" />
+</div>
+<div class="section" id="id2">
+<h3>Начальная форма<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Для того чтобы создать <em>начальную</em> форму (форма отправки шутки пользователем), введите название формы в поле <em>Label</em> (например: <em>Отправка шутки</em>) и перетащите на свободное место кнопку <strong>Stage Node</strong></p></li>
+</ol>
+<img alt="_images/s_chain_start.png" src="_images/s_chain_start.png" />
+<ol class="arabic simple" start="2">
+<li><p>Чтобы заполнить созданную форму полями - откройте (нажмите 2 раза) на нод “Отправка шутки”</p></li>
+</ol>
+<img alt="_images/s_chain_stage_open.png" src="_images/s_chain_stage_open.png" />
+<ol class="arabic simple" start="3">
+<li><p>В нашей форме нам не хватает 2 поля ввода: “поле куда пользователь впишет шутку” и “поле VISA number” для выплаты вознаграждения. Давайте добавим их</p></li>
+</ol>
+<p>Для добавления нового поля нажмите на “зеленый плюсик”. Создайте 2 поля как на скриншоте:</p>
+<img alt="_images/s_chain_new_fields.png" src="_images/s_chain_new_fields.png" />
+<ol class="arabic simple" start="4">
+<li><p>Установите флажок <strong>Task is creatable</strong> (это значит что пользователь может сам создавать новые задачи на лету). Для сохранения формы нажмите <strong>Submit</strong></p></li>
+</ol>
+<img alt="_images/s_chains_submit.png" src="_images/s_chains_submit.png" />
+</div>
+<div class="section" id="id3">
+<h3>Форма верификации<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Создайте новую форму <strong>Stage Node</strong> Label=*Верификация шутки*. Добавьте в него поле “Шутка верифицирована”</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>соедините созданные формы между собой стрелочкой</p>
+</div>
+<img alt="_images/s_chain_verified_1.png" src="_images/s_chain_verified_1.png" />
+<img alt="_images/s_chain_verified_2.png" src="_images/s_chain_verified_2.png" />
+</div>
+<div class="section" id="logic-node">
+<h3>Logic node<a class="headerlink" href="#logic-node" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Создайте новую форму <strong>Logic Node</strong> Label=*Переход к выплате*. Добавьте в него условие как на скриншоте:</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>соедините созданные формы между собой стрелочкой</p>
+</div>
+<img alt="_images/s_chains_logic_1.png" src="_images/s_chains_logic_1.png" />
+<img alt="_images/s_chains_logic_2.png" src="_images/s_chains_logic_2.png" />
+</div>
+<div class="section" id="id4">
+<h3>Форма выплаты вознаграждения<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Создайте новую форму <strong>Stage Node</strong> Label=*Выплата вознаграждения*. Добавьте в него поле “Выплачено вознаграждение”</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>соедините созданные формы между собой стрелочкой</p>
+</div>
+<img alt="_images/s_chain_paid_out_1.png" src="_images/s_chain_paid_out_1.png" />
+<img alt="_images/s_chain_paid_out_2.png" src="_images/s_chain_paid_out_2.png" />
+</div>
+</div>
+<div class="section" id="giga-turnip">
+<h2>2. Giga Turnip<a class="headerlink" href="#giga-turnip" title="Permalink to this headline">¶</a></h2>
+<p>Чтобы пользователь имел доступ к задачам - необходимо настроить Ranks (ранки)</p>
+<ol class="arabic simple">
+<li><p>Перейдите к приложению <strong>Giga Turnip</strong> на страницу <a class="reference external" href="http://127.0.0.1:8000/admin/">admin</a></p></li>
+</ol>
+<img alt="_images/s_admin_start.png" src="_images/s_admin_start.png" />
+<div class="section" id="ranks-ranks-limit">
+<h3>Ranks, Ranks Limit<a class="headerlink" href="#ranks-ranks-limit" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Создадим новый ранк <strong>collector</strong> (этот ранк мы будем давать пользователям которые собирают шутки). Для этого перейдите в меню <strong>Ranks</strong> и добавьте новый ранк (<em>Add rank</em>)</p></li>
+</ol>
+<img alt="_images/s_chain_admin_rank_collector.png" src="_images/s_chain_admin_rank_collector.png" />
+<ol class="arabic simple" start="2">
+<li><p>Теперь необходимо настроить данный ранк (указать доступы формам и лимиты). Для этого перейдите в меню <strong>Rank limits</strong> и добавьте новый ранк (<em>Add rank limit</em>)</p></li>
+</ol>
+<p>Ранк <strong>collector</strong> имеет доступ к форме отправке шутки, укажем это в настройках:</p>
+<img alt="_images/s_chain_rank_limits_1.png" src="_images/s_chain_rank_limits_1.png" />
+<ol class="arabic simple" start="3">
+<li><p>Аналогично создайте ранки <strong>accounter</strong> и <strong>verifier</strong>, настройки <strong>rank limits</strong> можете посмотреть в скриншотах:</p></li>
+</ol>
+<img alt="_images/s_chain_rank_limits_2.png" src="_images/s_chain_rank_limits_2.png" />
+<img alt="_images/s_chain_rank_limits_3.png" src="_images/s_chain_rank_limits_3.png" />
+</div>
+<div class="section" id="rank-records">
+<h3>Rank records<a class="headerlink" href="#rank-records" title="Permalink to this headline">¶</a></h3>
+<p>Для того чтобы назначить ранки пользователям, эти пользователи должны зарегистрированы в системе (сделать <strong>Log in</strong> в приложении <strong>Giga Turnip Task View</strong>)</p>
+<ol class="arabic simple">
+<li><p>Перейдите к приложению <strong>Giga Turnip Task View</strong> и сделайте <strong>Log in</strong> под пользователем который будет у Вас “Сборщиком шуток”</p></li>
+<li><p>Сделайте <strong>Log out</strong> и опять <strong>Log in</strong> под пользователем который будет у Вас “Верификатором шуток”</p></li>
+<li><p>Сделайте <strong>Log out</strong> и опять <strong>Log in</strong> под пользователем который будет у Вас “Бухгалтером”</p></li>
+</ol>
+<p>После данных нехитрых манипуляций в системе <strong>Giga Turnip</strong> появятся данные пользователи. Теперь мы можем назначить каждому пользователю свой <em>Rank</em>. Перейдите в меню <strong>Rank records</strong> и назначьте каждому пользователю свой <em>Rank</em></p>
+<img alt="_images/s_chain_rank_recrods.png" src="_images/s_chain_rank_recrods.png" />
+</div>
+</div>
+<div class="section" id="giga-turnip-task-view">
+<h2>3. Giga Turnip Task View<a class="headerlink" href="#giga-turnip-task-view" title="Permalink to this headline">¶</a></h2>
+<p>Ну вот все и готово для тестирования пользовательского интерфейса!</p>
+<div class="section" id="collector">
+<h3>collector<a class="headerlink" href="#collector" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Перейдите к приложению <strong>Giga Turnip Task View</strong> и сделайте <strong>Log in</strong> под пользователем который будет у Вас “Сборщиком шуток”. После выбора Кампании Jokes Collector у пользователя появится возможность создавать формы для отправки шуток.</p></li>
+</ol>
+<img alt="_images/s_client_collector.png" src="_images/s_client_collector.png" />
+<ol class="arabic simple" start="2">
+<li><p>Нажмите на кнопку <strong>create</strong>, заполните поля и отправьте форму на проверку</p></li>
+</ol>
+<img alt="_images/s_client_collector_joke.png" src="_images/s_client_collector_joke.png" />
+</div>
+<div class="section" id="verifier">
+<h3>verifier<a class="headerlink" href="#verifier" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Сделайте <strong>Log in</strong> под пользователем который будет у Вас “Верификатором”. После выбора Кампании Jokes Collector на вкладке <strong>ДОСТУПНЫЕ</strong> у пользователя появится возможность верифицировать формы которые были отправлены коллектором.</p></li>
+</ol>
+<img alt="_images/s_chain_verifier_1.png" src="_images/s_chain_verifier_1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Нажмите на кнопку <strong>open</strong>, Oops! чтобы верифицировать шутку нам не хватает текста шутки из предыдущей формы. Давайте с Вами добавим отображение “предыдущей формы”</p></li>
+</ol>
+<img alt="_images/s_chain_verifier_2.png" src="_images/s_chain_verifier_2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Перейдите к приложению <strong>Giga Turnip</strong> в меню <strong>Task stages</strong> и для формы <em>Верификации</em> укажите <em>Displayed prev stages</em></p></li>
+</ol>
+<img alt="_images/s_chain_verifier_3.png" src="_images/s_chain_verifier_3.png" />
+<ol class="arabic simple" start="4">
+<li><p>Возвращаемся к приложению <strong>Giga Turnip Task View</strong> проверяем форму верификации. Стало гораздо лучше!</p></li>
+</ol>
+<img alt="_images/s_chain_verifier_4.png" src="_images/s_chain_verifier_4.png" />
+</div>
+<div class="section" id="accounter">
+<h3>accounter<a class="headerlink" href="#accounter" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Сделайте <strong>Log in</strong> под пользователем который будет у Вас “Бухгалтером&gt;”. После выбора Кампании Jokes Collector на вкладке <strong>ДОСТУПНЫЕ</strong> у пользователя появится возможность подтвердить оплату.</p></li>
+</ol>
+<img alt="_images/s_chain_verifier_1.png" src="_images/s_chain_verifier_1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Нажмите на кнопку <strong>open</strong>, Oops! чтобы подтвердить нам опять не хватает данных из предыдущих форм (Вы уже умеете решать эту проблему)</p></li>
+</ol>
+<img alt="_images/s_chain_paid.png" src="_images/s_chain_paid.png" />
+<p>Ура! На этом все!</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="install.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Kloop Media.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

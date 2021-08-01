@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Installation &mdash; Giga Turnip 1.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Настройка DEMO приложений" href="settings.html" />
+    <link rel="prev" title="О программе" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Giga Turnip
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">О программе</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#google-cloud-platform">1. Google Cloud Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#firebase">2. Firebase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#credentials">3. Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#giga-turnip">4. Giga Turnip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#giga-turnip-front-end">5. Giga Turnip Front End</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#giga-turnip-task-view">6. Giga Turnip Task View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Настройка DEMO приложений</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Giga Turnip</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Система приложений состоит из 3 компонент:</p>
+<ol class="arabic simple">
+<li><p><strong>Giga Turnip</strong> - это Django приложение для обслуживания backend логики</p></li>
+<li><p><strong>Giga Turnip Front End</strong> - это React приложение для создания произвольных Кампаний</p></li>
+<li><p><strong>Giga Turnip Task View</strong> - это React приложение (клиент для пользователей) в котором пользователи могут выполнять свои задания</p></li>
+</ol>
+<p><em>прежде чем начать развертывание приложений, необходимо создать новый проект в Google Cloud Platform</em> <strong>(GCP)</strong> <em>и подключите его к</em> <strong>Firebase</strong> <em>(как это сделать - смотрите ниже в инструкции, удачи!)</em></p>
+<div class="section" id="google-cloud-platform">
+<h2>1. Google Cloud Platform<a class="headerlink" href="#google-cloud-platform" title="Permalink to this headline">¶</a></h2>
+<p>Создайте новый проект в <a class="reference external" href="https://console.cloud.google.com/">GCP</a> (например: Jokes Collector)</p>
+<img alt="_images/gcp_create.png" src="_images/gcp_create.png" />
+</div>
+<div class="section" id="firebase">
+<h2>2. Firebase<a class="headerlink" href="#firebase" title="Permalink to this headline">¶</a></h2>
+<p>В консоле <a class="reference external" href="https://console.firebase.google.com/">Firebase</a> подключите Ваш созданный проект из <strong>GCP</strong></p>
+<img alt="_images/firebase_create.png" src="_images/firebase_create.png" />
+<p>Перейдите на вкладку <strong>Authentication</strong> и включите sign-in через <strong>Email</strong> и <strong>Google</strong></p>
+<img alt="_images/firebase_google_auth.png" src="_images/firebase_google_auth.png" />
+</div>
+<div class="section" id="credentials">
+<h2>3. Credentials<a class="headerlink" href="#credentials" title="Permalink to this headline">¶</a></h2>
+<p>Для связи приложений с Firebase Вам необходимо получить <strong>Firebase configuration</strong> + создать <strong>json ключ</strong> через GCP:</p>
+<ol class="arabic simple">
+<li><p>Перейдите на свой проект в <strong>Firebase</strong> на закладку <strong>Settings</strong></p></li>
+<li><p>На закладке <strong>General</strong> добавьте <em>Web App</em> (красная стрелочка)</p></li>
+</ol>
+<img alt="_images/firebase_web_app.png" src="_images/firebase_web_app.png" />
+<img alt="_images/firebase_web_app_create.png" src="_images/firebase_web_app_create.png" />
+<ol class="arabic simple" start="3">
+<li><p>После создания обратие внимание на переменную <strong>firebaseConfig</strong>, эти данные нам понадобятся немного позже</p></li>
+</ol>
+<img alt="_images/firebase_config.png" src="_images/firebase_config.png" />
+<ol class="arabic simple" start="4">
+<li><p>Для создания <strong>firebase json key</strong> перейдите на свой проект в <strong>GCP</strong> на закладку <strong>IAM &amp; Admin -&gt; Service Accounts</strong> (для перехода в настройки сервисного аккаунта firebase - нажмите на него)</p></li>
+</ol>
+<img alt="_images/gcp_json_key_1.png" src="_images/gcp_json_key_1.png" />
+<ol class="arabic simple" start="5">
+<li><p>Создайте новый ключ</p></li>
+</ol>
+<img alt="_images/gcp_json_key_2.png" src="_images/gcp_json_key_2.png" />
+<ol class="arabic simple" start="6">
+<li><p>Выберите тип JSON, после подтверждения на Ваш компьютер будет скачан json файл, будем называть его с Вами <strong>firebase json key</strong> перенесите этот ключ в любую папку по Вашему усмотрению. Он нам понадобится немного позже</p></li>
+</ol>
+<img alt="_images/gcp_json_key_3.png" src="_images/gcp_json_key_3.png" />
+<p>Отлично! Мы закончили с настройкой <strong>GCP</strong> + <strong>Firebase</strong>. Теперь у нас имеются: <strong>firebaseConfig</strong> и <strong>firebase json key</strong>. Самое время начать локально развертывать наши приложения!</p>
+</div>
+<div class="section" id="giga-turnip">
+<h2>4. Giga Turnip<a class="headerlink" href="#giga-turnip" title="Permalink to this headline">¶</a></h2>
+<p><strong>Giga Turnip</strong> - это <em>Django</em> приложение для обслуживания backend логики</p>
+<p>First, obtain <a class="reference external" href="http://www.python.org/">Python</a> and <a class="reference external" href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> if you do not already have them. Using a
+virtual environment will make the installation easier, and will help to avoid
+clutter in your system-wide libraries. You will also need <a class="reference external" href="http://git-scm.com/">Git</a> in order to
+clone the repository.</p>
+<p>Создайте папку где будет развернуты все ваши приложения проекта, например <em>Jokes Collector</em> (далее: создаем виртуальную среду и активируем её):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">Jokes</span>\ <span class="n">Collector</span><span class="o">/</span>
+<span class="n">virtualenv</span> <span class="n">env</span>
+<span class="n">source</span> <span class="n">env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>set <code class="docutils literal notranslate"><span class="pre">FIREBASE_SERVICE_ACCOUNT_KEY</span></code> environment variable</p>
+<p>для этого установите значение FIREBASE_SERVICE_ACCOUNT_KEY значением содержимого файла <strong>firebase json key</strong> (если забыл где это смотри <strong>3. Credentials</strong>)</p>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">FIREBASE_SERVICE_ACCOUNT_KEY</span><span class="o">=</span><span class="s1">&#39;{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;service_account&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;jokes-collector&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;private_key_id&quot;</span><span class="p">:</span> <span class="s2">&quot;your_private_key_id&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;private_key&quot;</span><span class="p">:</span> <span class="s2">&quot;your_key&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;client_email&quot;</span><span class="p">:</span> <span class="s2">&quot;your_client_email&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;your_client_id&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;auth_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;your_auth_uri&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;token_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;your_token_uri&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;auth_provider_x509_cert_url&quot;</span><span class="p">:</span> <span class="s2">&quot;your_auth_provider_x509_cert_url&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;client_x509_cert_url&quot;</span><span class="p">:</span> <span class="s2">&quot;your_client_x509_cert_url&quot;</span>
+<span class="p">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<p>Клонируем репозиторий, устанавливаем зависимости, делаем миграцию, создаем суперюзера:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">KloopMedia</span><span class="o">/</span><span class="n">GigaTurnip</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">GigaTurnip</span>
+<span class="n">pipenv</span> <span class="n">install</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">createsuperuser</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">settings.py</span></code> add ‘<a class="reference external" href="http://localhost:3000">http://localhost:3000</a>’ and ‘<a class="reference external" href="http://localhost:3001">http://localhost:3001</a>’ into <code class="docutils literal notranslate"><span class="pre">CORS_ORIGIN_WHITELIST</span></code> variable</p>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CORS_ORIGIN_WHITELIST</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;http://localhost:3001&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>To actually get Giga Turnip running, do the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+</pre></div>
+</div>
+<p>This will give you a locally running instance <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+<img alt="_images/django_admin.png" src="_images/django_admin.png" />
+<p>Отлично! Мы закончили установку <strong>Giga Turnip</strong>! Переходим к установке <strong>Giga Turnip Front End</strong></p>
+</div>
+<div class="section" id="giga-turnip-front-end">
+<h2>5. Giga Turnip Front End<a class="headerlink" href="#giga-turnip-front-end" title="Permalink to this headline">¶</a></h2>
+<p><strong>Giga Turnip Front End</strong> - это <em>React</em> приложение для создания Кампаний (цепочек задач, а также логики их выполнения)</p>
+<p>Клонируем репозиторий, переходим на ветку staging, устанавливаем необходимые библиотеки:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">KloopMedia</span><span class="o">/</span><span class="n">gigaturnip</span><span class="o">-</span><span class="n">frontend</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">gigaturnip</span><span class="o">-</span><span class="n">frontend</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">staging</span>
+<span class="n">npm</span> <span class="n">install</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Change <code class="docutils literal notranslate"><span class="pre">firebaseConfig</span></code> in /src/util/Firebase.js with your <strong>firebaseConfig</strong> (если забыл где это смотри <strong>3. Credentials</strong>)</p>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">firebaseConfig</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">apiKey</span><span class="p">:</span> <span class="s2">&quot;AIzaSyCCeI1gW0WT_PBZ6rrr2xDic15VTbge-GA&quot;</span><span class="p">,</span>
+    <span class="n">authDomain</span><span class="p">:</span> <span class="s2">&quot;jokes-collector.firebaseapp.com&quot;</span><span class="p">,</span>
+    <span class="n">projectId</span><span class="p">:</span> <span class="s2">&quot;jokes-collector&quot;</span><span class="p">,</span>
+    <span class="n">storageBucket</span><span class="p">:</span> <span class="s2">&quot;jokes-collector.appspot.com&quot;</span><span class="p">,</span>
+    <span class="n">messagingSenderId</span><span class="p">:</span> <span class="s2">&quot;500369573812&quot;</span><span class="p">,</span>
+    <span class="n">appId</span><span class="p">:</span> <span class="s2">&quot;1:500369573812:web:29d2abca2ff8f93111d4e1&quot;</span>
+  <span class="p">};</span>
+</pre></div>
+</div>
+<p>Чтобы запустить приложение:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">start</span>
+</pre></div>
+</div>
+<p>This will give you a locally running instance <a class="reference external" href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a></p>
+<img alt="_images/frontend_run.png" src="_images/frontend_run.png" />
+<p>Поздравляем! Вы на верном пути! Осталось установить последнее приложение!</p>
+</div>
+<div class="section" id="giga-turnip-task-view">
+<h2>6. Giga Turnip Task View<a class="headerlink" href="#giga-turnip-task-view" title="Permalink to this headline">¶</a></h2>
+<p><strong>Giga Turnip Task View</strong> - это React приложение (клиент для пользователей) в котором пользователи могут выполнять свои задания:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">KloopMedia</span><span class="o">/</span><span class="n">GigaTurnipTaskView</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">GigaTurnipTaskView</span>
+<span class="n">npm</span> <span class="n">install</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Change <code class="docutils literal notranslate"><span class="pre">firebaseConfig</span></code> in /src/util/Firebase.js with your <strong>firebaseConfig</strong> (если забыл где это смотри <strong>3. Credentials</strong>)</p>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">firebaseConfig</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">apiKey</span><span class="p">:</span> <span class="s2">&quot;AIzaSyCCeI1gW0WT_PBZ6rrr2xDic15VTbge-GA&quot;</span><span class="p">,</span>
+    <span class="n">authDomain</span><span class="p">:</span> <span class="s2">&quot;jokes-collector.firebaseapp.com&quot;</span><span class="p">,</span>
+    <span class="n">projectId</span><span class="p">:</span> <span class="s2">&quot;jokes-collector&quot;</span><span class="p">,</span>
+    <span class="n">storageBucket</span><span class="p">:</span> <span class="s2">&quot;jokes-collector.appspot.com&quot;</span><span class="p">,</span>
+    <span class="n">messagingSenderId</span><span class="p">:</span> <span class="s2">&quot;500369573812&quot;</span><span class="p">,</span>
+    <span class="n">appId</span><span class="p">:</span> <span class="s2">&quot;1:500369573812:web:29d2abca2ff8f93111d4e1&quot;</span>
+  <span class="p">};</span>
+</pre></div>
+</div>
+<p>Чтобы запустить приложение:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">start</span>
+</pre></div>
+</div>
+<p>This will give you a locally running instance <a class="reference external" href="http://127.0.0.1:3001/">http://127.0.0.1:3001/</a></p>
+<img alt="_static/frontend_task_view_run.png" src="_static/frontend_task_view_run.png" />
+<p>Ура! Мы закончили с установкой! Можем переходить к настройке приложений!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="settings.html" class="btn btn-neutral float-right" title="Настройка DEMO приложений" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="overview.html" class="btn btn-neutral float-left" title="О программе" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Kloop Media.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
