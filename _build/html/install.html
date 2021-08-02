@@ -217,14 +217,22 @@
 <div class="section" id="giga-turnip">
 <h2>4. Giga Turnip<a class="headerlink" href="#giga-turnip" title="Permalink to this headline">¶</a></h2>
 <p><strong>Giga Turnip</strong> - это <em>Django</em> приложение для обслуживания backend логики</p>
-<p>First, obtain <a class="reference external" href="http://www.python.org/">Python</a> and <a class="reference external" href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> if you do not already have them. Using a
+<p>First, obtain <a class="reference external" href="http://www.python.org/">Python</a> and <a class="reference external" href="https://pipenv.pypa.io/en/latest/">pipenv</a> if you do not already have them. Using a
 virtual environment will make the installation easier, and will help to avoid
 clutter in your system-wide libraries. You will also need <a class="reference external" href="http://git-scm.com/">Git</a> in order to
 clone the repository.</p>
-<p>Создайте папку где будет развернуты все ваши приложения проекта, например <em>Jokes Collector</em> (далее: создаем виртуальную среду и активируем её):</p>
+<p>Создайте папку где будет развернуты все ваши приложения проекта, например <em>Jokes Collector</em>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">Jokes</span>\ <span class="n">Collector</span><span class="o">/</span>
-<span class="n">virtualenv</span> <span class="n">env</span>
-<span class="n">source</span> <span class="n">env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>Клонируем репозиторий, устанавливаем зависимости, делаем миграцию, создаем суперюзера:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">KloopMedia</span><span class="o">/</span><span class="n">GigaTurnip</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">GigaTurnip</span>
+<span class="n">pipenv</span> <span class="n">shell</span>
+<span class="n">pipenv</span> <span class="n">install</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">createsuperuser</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -245,15 +253,6 @@ clone the repository.</p>
       <span class="s2">&quot;auth_provider_x509_cert_url&quot;</span><span class="p">:</span> <span class="s2">&quot;your_auth_provider_x509_cert_url&quot;</span><span class="p">,</span>
       <span class="s2">&quot;client_x509_cert_url&quot;</span><span class="p">:</span> <span class="s2">&quot;your_client_x509_cert_url&quot;</span>
 <span class="p">}</span><span class="s1">&#39;</span>
-</pre></div>
-</div>
-<p>Клонируем репозиторий, устанавливаем зависимости, делаем миграцию, создаем суперюзера:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">KloopMedia</span><span class="o">/</span><span class="n">GigaTurnip</span><span class="o">.</span><span class="n">git</span>
-<span class="n">cd</span> <span class="n">GigaTurnip</span>
-<span class="n">pipenv</span> <span class="n">install</span>
-<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
-<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
-<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">createsuperuser</span>
 </pre></div>
 </div>
 <div class="admonition note">

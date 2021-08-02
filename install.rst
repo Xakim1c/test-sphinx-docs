@@ -62,20 +62,28 @@ Installation
 ---------------
 **Giga Turnip** - это *Django* приложение для обслуживания backend логики
 
-First, obtain Python_ and virtualenv_ if you do not already have them. Using a
+First, obtain Python_ and pipenv_ if you do not already have them. Using a
 virtual environment will make the installation easier, and will help to avoid
 clutter in your system-wide libraries. You will also need Git_ in order to
 clone the repository.
 
 .. _Python: http://www.python.org/
-.. _virtualenv: http://pypi.python.org/pypi/virtualenv
+.. _pipenv: https://pipenv.pypa.io/en/latest/
 .. _Git: http://git-scm.com/
 
-Создайте папку где будет развернуты все ваши приложения проекта, например *Jokes Collector* (далее: создаем виртуальную среду и активируем её)::
+Создайте папку где будет развернуты все ваши приложения проекта, например *Jokes Collector*::
 
     cd Jokes\ Collector/
-    virtualenv env
-    source env/bin/activate
+
+Клонируем репозиторий, устанавливаем зависимости, делаем миграцию, создаем суперюзера::
+
+    git clone https://github.com/KloopMedia/GigaTurnip.git
+    cd GigaTurnip
+    pipenv shell
+    pipenv install
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py createsuperuser
 
 .. note::
     set ``FIREBASE_SERVICE_ACCOUNT_KEY`` environment variable
@@ -97,14 +105,6 @@ Example::
           "client_x509_cert_url": "your_client_x509_cert_url"
     }'
 
-Клонируем репозиторий, устанавливаем зависимости, делаем миграцию, создаем суперюзера::
-
-    git clone https://github.com/KloopMedia/GigaTurnip.git
-    cd GigaTurnip
-    pipenv install
-    python manage.py makemigrations
-    python manage.py migrate
-    python manage.py createsuperuser
 
 .. note::
     In ``settings.py`` add 'http://localhost:3000' and 'http://localhost:3001' into ``CORS_ORIGIN_WHITELIST`` variable
