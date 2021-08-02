@@ -79,8 +79,8 @@ clone the repository.
 
     git clone https://github.com/KloopMedia/GigaTurnip.git
     cd GigaTurnip
-    pipenv shell
     pipenv install
+    pipenv shell
     python manage.py makemigrations
     python manage.py migrate
     python manage.py createsuperuser
