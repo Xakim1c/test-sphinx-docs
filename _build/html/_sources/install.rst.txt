@@ -71,18 +71,29 @@ clone the repository.
 .. _pipenv: https://pipenv.pypa.io/en/latest/
 .. _Git: http://git-scm.com/
 
-Создайте папку где будет развернуты все ваши приложения проекта, например *Jokes Collector*::
+Создайте папку где будет развернуты все ваши приложения проекта, например *JokesCollector*::
 
-    cd Jokes\ Collector/
+    mkdir JokesCollector
+    cd JokesCollector
 
-Клонируем репозиторий, устанавливаем зависимости, делаем миграцию, создаем суперюзера::
+
+Клонируем репозиторий::
 
     git clone https://github.com/KloopMedia/GigaTurnip.git
     cd GigaTurnip
+
+Устанавливаем зависимости::
+
     pipenv install
     pipenv shell
+
+Делаем миграцию::
+
     python manage.py makemigrations
     python manage.py migrate
+
+Создаем суперюзера::
+
     python manage.py createsuperuser
 
 .. note::
