@@ -234,15 +234,6 @@ clone the repository.</p>
 <span class="n">pipenv</span> <span class="n">shell</span>
 </pre></div>
 </div>
-<p>Делаем миграцию:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
-<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
-</pre></div>
-</div>
-<p>Создаем суперюзера:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">createsuperuser</span>
-</pre></div>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>set <code class="docutils literal notranslate"><span class="pre">FIREBASE_SERVICE_ACCOUNT_KEY</span></code> environment variable</p>
@@ -261,6 +252,15 @@ clone the repository.</p>
       <span class="s2">&quot;auth_provider_x509_cert_url&quot;</span><span class="p">:</span> <span class="s2">&quot;your_auth_provider_x509_cert_url&quot;</span><span class="p">,</span>
       <span class="s2">&quot;client_x509_cert_url&quot;</span><span class="p">:</span> <span class="s2">&quot;your_client_x509_cert_url&quot;</span>
 <span class="p">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<p>Делаем миграцию:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+</pre></div>
+</div>
+<p>Создаем суперюзера:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">createsuperuser</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -306,6 +306,10 @@ clone the repository.</p>
     <span class="n">appId</span><span class="p">:</span> <span class="s2">&quot;1:500369573812:web:29d2abca2ff8f93111d4e1&quot;</span>
   <span class="p">};</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Замените значение переменной  <code class="docutils literal notranslate"><span class="pre">baseUrl</span></code> in /src/util/Urls.js на “<a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>”</p>
 </div>
 <p>Чтобы запустить приложение:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">start</span>

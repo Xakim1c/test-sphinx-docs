@@ -87,15 +87,6 @@ clone the repository.
     pipenv install
     pipenv shell
 
-Делаем миграцию::
-
-    python manage.py makemigrations
-    python manage.py migrate
-
-Создаем суперюзера::
-
-    python manage.py createsuperuser
-
 .. note::
     set ``FIREBASE_SERVICE_ACCOUNT_KEY`` environment variable
 
@@ -115,6 +106,15 @@ Example::
           "auth_provider_x509_cert_url": "your_auth_provider_x509_cert_url",
           "client_x509_cert_url": "your_client_x509_cert_url"
     }'
+
+Делаем миграцию::
+
+    python manage.py makemigrations
+    python manage.py migrate
+
+Создаем суперюзера::
+
+    python manage.py createsuperuser
 
 
 .. note::
@@ -163,6 +163,9 @@ Example::
         messagingSenderId: "500369573812",
         appId: "1:500369573812:web:29d2abca2ff8f93111d4e1"
       };
+
+.. note::
+    Замените значение переменной  ``baseUrl`` in /src/util/Urls.js на "http://127.0.0.1:8000/"
 
 Чтобы запустить приложение::
 
